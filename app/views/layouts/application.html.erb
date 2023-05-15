@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+<<<<<<< HEAD
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "/assets/application.js", "data-turbo-track": "reload", defer: true %>
+=======
+
+    <%= stylesheet_link_tag "/assets/application.js", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+>>>>>>> 5fe1e4eaa864245dfbd68d34b7e27e200fdd4cbb
   </head>
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>
