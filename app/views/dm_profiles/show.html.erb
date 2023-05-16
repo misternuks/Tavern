@@ -1,8 +1,11 @@
-<div class="card-product">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="card-product-infos">
-    <h2><%= @dm_profile.user.email %></h2>
-    <p>The absolute <strong>best</strong> DM in town.</p>
+<div class="container">
+  <div class="card-product">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-product-infos">
+      <h2><%= @dm_profile.user.email %></h2>
+      <p>The absolute <strong>best</strong> DM in town.</p>
+      <p><%= link_to 'Book this DM', new_dm_profile_booking_path(@dm_profile), class: 'btn btn-primary', id: 'book-btn'%></p>
+    </div>
   </div>
+  <p><%= link_to 'Back', dm_profiles_path, class: 'btn btn-primary'  %></p>
 </div>
-<p><%= link_to 'Back', dm_profiles_path, class: 'btn btn-primary'  %></p>

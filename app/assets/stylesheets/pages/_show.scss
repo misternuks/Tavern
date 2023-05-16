@@ -5,12 +5,14 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .card-product img {
   height: 100%;
   width: 120px;
   object-fit: cover;
+  position: relative;
 }
 
 .card-product h2 {
@@ -29,4 +31,13 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+.container {
+  margin-top: 30px;
+}
+#book-btn {
+  background-color: purple;
+  border: purple 1px solid;
+  border-radius: 5px;
+  position: relative;
 }
