@@ -1,8 +1,6 @@
 <h1>Pages#home</h1>
-Yo what up
-<% if current_user %>
-  <%= current_user.id %>
-<% end %>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to 'See our DMs', dm_profiles_path  %>
-<%= link_to 'Logout', destroy_user_session_path, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
+<p>Hello,
+  <% if current_user %>
+    <%= current_user.id %>
+  <% end %>!
+</p>
