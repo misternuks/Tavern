@@ -1,8 +1,10 @@
-<%= simple_form_for [@dm_profile, @booking] do |f| %>
-  <%= f.input :game_type %>
-  <%= f.input :date, as: :date, html5: true %>
-  <%= f.input :session_hours, :collection => (1..10) %>
-  <%= f.input :player_number, :collection => (1..10) %>
-  <%= f.input :details %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <%= simple_form_for [@dm_profile, @booking], html: { class: "cmint"} do |f| %>
+    <%= f.input :game_type, :collection => %i[Call\ Of\ Cthulu  Dungeons\ and\ Dragons Pathfinder Vampire\ The\ Masquerade Warhammer\ Fantasy\ Roleplay] %>
+    <%= f.input :date, as: :date, html5: true %>
+    <%= f.input :session_hours, :label => 'How long will you play? (hrs)', :collection => (1..10) %>
+    <%= f.input :player_number, :label => 'How many players?', :collection => (1..10) %>
+    <%= f.input :details, :placeholder => 'Include things like supplementary information, preferences etc (optional)', :label => 'Message for the DM' %>
+    <%= f.submit %>
+  <% end %>
+</div>
