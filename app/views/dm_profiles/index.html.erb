@@ -1,0 +1,14 @@
+<h1>Dm Profiles</h1>
+<ul>
+  <% @dm_profiles.each do |dm_profile| %>
+    <div class="card-product">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-product-infos">
+        <h2><%= dm_profile.user.email %></h2>
+        <p>The absolute <strong>best</strong> DM in town.</p>
+        <p><%= link_to 'Visit Profile', dm_profile_path(dm_profile)  %></p>
+      </div>
+    </div>
+  <% end %>
+</ul>
+<p><%= link_to 'Back', root_path, class: 'btn btn-primary'  %></p>
