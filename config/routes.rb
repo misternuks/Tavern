@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   resources :dm_profiles, only: %i[index show new create] do
     resources :bookings, only: %i[new create]
   end
-  resources :bookings, only: %i[index show delete]
+  resources :bookings, only: %i[index show destroy]
 end
