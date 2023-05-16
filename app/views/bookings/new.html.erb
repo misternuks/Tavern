@@ -1,0 +1,8 @@
+<%= simple_form_for [@dm_profile, @booking] do |f| %>
+  <%= f.input :game_type %>
+  <%= f.input :date, as: :date, html5: true %>
+  <%= f.input :session_hours, :collection => (1..10) %>
+  <%= f.input :player_number, :collection => (1..10) %>
+  <%= f.input :details %>
+  <%= f.submit %>
+<% end %>
