@@ -1,14 +1,17 @@
-<h1>Dm Profiles</h1>
-<ul>
-  <% @dm_profiles.each do |dm_profile| %>
-    <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="card-product-infos">
-        <h2><%= dm_profile.user.email %></h2>
-        <p>The absolute <strong>best</strong> DM in town.</p>
-        <p><%= link_to 'Visit Profile', dm_profile_path(dm_profile)  %></p>
+<div class="container">
+  <h1>Dm Profiles</h1>
+  <ul>
+    <% @dm_profiles.each do |dm_profile| %>
+      <div class="card-product">
+        <%= image_tag "http://source.unsplash.com/featured/headshot&#{rand(1000)}" %>
+        <div class="card-product-infos">
+          <h2><%= dm_profile.user.email %></h2>
+          <p><%= dm_profile.experience %></p>
+          <p>Availability: <%= dm_profile.availability %></p>
+          <p><%= link_to 'Visit Profile', dm_profile_path(dm_profile)  %></p>
+        </div>
       </div>
-    </div>
-  <% end %>
-</ul>
-<p><%= link_to 'Back', root_path, class: 'btn btn-primary'  %></p>
+    <% end %>
+  </ul>
+  <p><%= link_to 'Back', root_path, class: 'btn btn-primary'  %></p>
+</div>

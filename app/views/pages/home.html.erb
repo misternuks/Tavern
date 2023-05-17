@@ -5,7 +5,6 @@
     <%= link_to 'Book now', dm_profiles_path, class:"btn btn-flat" %>
   </div>
 </div>
-
 <!--category bar-->
 <div class="bar-container">
   <span class="label-container">
@@ -28,49 +27,18 @@
 <!--dm cards grid-->
 <div class="card-container">
   <div class="cards">
-    <div class="card-trip">
-      <%= image_tag 'legolis.jpg', width:"100%", height:"36"%>
-      <div class="card-trip-infos">
-        <div>
-          <h2>Legolis</h2>
-          <p>780 hrs 220 sessions</p>
-        </div>
-        <h2 class="card-trip-pricing">$25 per hr</h2>
-        <%= image_tag 'legolis.jpg', class:"card-trip-user avatar-bordered"%>
-      </div>
-    </div>
+    <% DmProfile.first(4).each do |dm_profile| %>
       <div class="card-trip">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Title here</h2>
-          <p>Short description here!</p>
+        <%= image_tag "http://source.unsplash.com/featured/?boardgame&#{rand(1000)}" %>
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= dm_profile.user.email %></h2>
+            <p><%=dm_profile.availability %></p>
+          </div>
+          <h2 class="card-trip-pricing">$<%= dm_profile.price %></h2>
+          <%= image_tag "http://source.unsplash.com/featured/?face&#{rand(1000)}", class: "card-trip-user avatar-bordered" %>
         </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
       </div>
-    </div>
-      <div class="card-trip">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Title here</h2>
-          <p>Short description here!</p>
-        </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      </div>
-    </div>
-      <div class="card-trip">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Frodo</h2>
-          <p>800 hours</p>
-        </div>
-        <h2 class="card-trip-pricing">$20 per hr</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      </div>
-    </div>
+    <% end %>
   </div>
 </div>

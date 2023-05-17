@@ -7,14 +7,14 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "/assets/application.js", "data-turbo-track": "reload", defer: true %>
-<%# >>>>>>> a40409d7bb10aa2cedc8f826d5602ac5b0f8db55 %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%# >>>>>>> a40409d7bb10aa2cedc8f826d5602ac5b0f8db55 %>
   </head>
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
     <%= yield %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
   </body>
 </html>
