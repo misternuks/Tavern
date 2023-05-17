@@ -1,43 +1,8 @@
-<h1>Tavern</h1>
-
-<!--navbar-->
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
-</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Messages</a>
-          </li>
-          <li class="nav-item dropdown">
-            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
-            </div>
-          </li>
-          <!--li class="nav-item"-->
-          <!--/li-->
-      </ul>
-    </div>
-  </div>
-</div>
-
 <!--banner-->
 <div class="banner">
-  <div class="container">
+  <div>
     <h1><strong>WELCOME TO THE TAVERN</strong></h1>
-    <a class="btn btn-flat" href="#">Book now</a>
+    <%= link_to 'Book now', dm_profiles_path, class:"btn btn-flat" %>
   </div>
 </div>
 
@@ -59,18 +24,19 @@
     <%= image_tag 'pathfinder.png', width:"100%", height:"24"%>
   </span>
 </div>
+
 <!--dm cards grid-->
 <div class="card-container">
   <div class="cards">
     <div class="card-trip">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <%= image_tag 'legolis.jpg', width:"100%", height:"36"%>
       <div class="card-trip-infos">
         <div>
-          <h2>Title here</h2>
-          <p>Short description here!</p>
+          <h2>Legolis</h2>
+          <p>780 hrs 220 sessions</p>
         </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        <h2 class="card-trip-pricing">$25 per hr</h2>
+        <%= image_tag 'legolis.jpg', class:"card-trip-user avatar-bordered"%>
       </div>
     </div>
       <div class="card-trip">
@@ -99,10 +65,10 @@
       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
       <div class="card-trip-infos">
         <div>
-          <h2>Title here</h2>
-          <p>Short description here!</p>
+          <h2>Frodo</h2>
+          <p>800 hours</p>
         </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
+        <h2 class="card-trip-pricing">$20 per hr</h2>
         <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
       </div>
     </div>
