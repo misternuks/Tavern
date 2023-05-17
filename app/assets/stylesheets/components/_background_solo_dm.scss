@@ -1,0 +1,28 @@
+.showpage-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  justify-content: center;
+
+}
+
+.showpage-container::before {
+  content: "";
+  background: url('dm-solo-page'), rgba(0, 0, 0, 0.7); /* Add a semi-transparent black background */
+  background-blend-mode: multiply; /* This will blend the image and the black background */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1; /* This will keep the background behind the other content */
+}
+
+.profile-flex {
+  display: flex;
+  justify-content: center;
+}
