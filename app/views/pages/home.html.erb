@@ -1,4 +1,110 @@
-<h1>Pages#home</h1>
-<% if current_user %>
-  <p>Hello,<%= current_user.id %>!</p>
-<% end %>
+<h1>Tavern</h1>
+
+<!--navbar-->
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Messages</a>
+          </li>
+          <li class="nav-item dropdown">
+            <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
+            </div>
+          </li>
+          <!--li class="nav-item"-->
+          <!--/li-->
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!--banner-->
+<div class="banner">
+  <div class="container">
+    <h1><strong>WELCOME TO THE TAVERN</strong></h1>
+    <a class="btn btn-flat" href="#">Book now</a>
+  </div>
+</div>
+
+<!--category bar-->
+<div class="bar-container">
+  <span class="label-container">
+    <%= image_tag 'Vampire_The_Masquerade.png', width:"100%", height:"36"%>
+  </span>
+  <span class="label-container">
+    <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp', width:"100%", height:"36"%>
+  </span>
+  <span class="label-container">
+    <%= image_tag 'dnd2.png', width:"100%", height:"42"%>
+  </span>
+  <span class="label-container">
+    <%= image_tag 'WFRP-Core-logo.png', width:"100%", height:"36"%>
+  </span>
+  <span class="label-container">
+    <%= image_tag 'pathfinder.png', width:"100%", height:"24"%>
+  </span>
+</div>
+<!--dm cards grid-->
+<div class="card-container">
+  <div class="cards">
+    <div class="card-trip">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <h2>Title here</h2>
+          <p>Short description here!</p>
+        </div>
+        <h2 class="card-trip-pricing">£99.99</h2>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+      </div>
+    </div>
+      <div class="card-trip">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <h2>Title here</h2>
+          <p>Short description here!</p>
+        </div>
+        <h2 class="card-trip-pricing">£99.99</h2>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+      </div>
+    </div>
+      <div class="card-trip">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <h2>Title here</h2>
+          <p>Short description here!</p>
+        </div>
+        <h2 class="card-trip-pricing">£99.99</h2>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+      </div>
+    </div>
+      <div class="card-trip">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <h2>Title here</h2>
+          <p>Short description here!</p>
+        </div>
+        <h2 class="card-trip-pricing">£99.99</h2>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+      </div>
+    </div>
+  </div>
+</div>

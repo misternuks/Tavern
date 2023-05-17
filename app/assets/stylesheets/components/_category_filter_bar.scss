@@ -1,0 +1,26 @@
+.bar-container {
+  margin: 32px;
+  display:flex;
+  justify-content: space-evenly;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("logo_bg_plank.jpg");
+  align-items: center;
+  height: 64px;
+}
+
+.label-container {
+  justify-self: center;
+  flex-direction: column;
+  align-content: center;
+}
+
+
+.category_ {
+  width: 40px;
+}
+
+.logo1{
+  background-image: url(app/assets/images/pathfinder.png);
+}
