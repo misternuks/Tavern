@@ -1,8 +1,8 @@
 <!--banner-->
 <div class="banner">
-  <div class="container">
+  <div>
     <h1><strong>WELCOME TO THE TAVERN</strong></h1>
-    <a class="btn btn-flat" href="#">Book now</a>
+    <%= link_to 'Book now', dm_profiles_path, class:"btn btn-flat" %>
   </div>
 </div>
 <!--category bar-->
@@ -23,6 +23,7 @@
     <%= image_tag 'pathfinder.png', width:"100%", height:"24"%>
   </span>
 </div>
+
 <!--dm cards grid-->
 <div class="card-container">
   <div class="cards">
