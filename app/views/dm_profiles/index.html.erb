@@ -1,13 +1,16 @@
 <div class="container">
-  <h1>Dm Profiles</h1>
+  <div class="div">
+    <h1>Dm Profiles</h1>
+  </div>
   <ul>
     <% @dm_profiles.each do |dm_profile| %>
       <div class="card-product">
-        <%= image_tag "http://source.unsplash.com/featured/headshot&#{rand(1000)}" %>
+        <%= image_tag "http://source.unsplash.com/featured/avatar&#{rand(1000)}" %>
         <div class="card-product-infos">
           <h2><%= dm_profile.user.email %></h2>
           <p><%= dm_profile.experience %></p>
           <p>Availability: <%= dm_profile.availability %></p>
+          <p>Price per hour: $<%= dm_profile.price %></p>
           <p><%= link_to 'Visit Profile', dm_profile_path(dm_profile)  %></p>
         </div>
       </div>
