@@ -2,22 +2,19 @@
 <html>
   <head>
     <title>Tavern</title>
+    <script src="https://kit.fontawesome.com/c33c079609.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-<%# <<<<<<< HEAD %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "/assets/application", "data-turbo-track": "reload", defer: true %>
-<%# ======= %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "/assets/application.js", "data-turbo-track": "reload", defer: true %>
 <%# >>>>>>> a40409d7bb10aa2cedc8f826d5602ac5b0f8db55 %>
   </head>
-
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <%= render "shared/navbar" %>
+    <%= render "shared/flashes" %>
     <%= yield %>
   </body>
 </html>
