@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 puts 'Warming the syrup...'
+Booking.destroy_all
 DmProfile.destroy_all
 User.destroy_all
 
