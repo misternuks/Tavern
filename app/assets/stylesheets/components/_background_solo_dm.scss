@@ -1,5 +1,5 @@
 .showpage-container {
-  position: relative;
+
   width: 100%;
   height: 100vh;
 
@@ -25,4 +25,25 @@
 .profile-flex {
   display: flex;
   justify-content: center;
+}
+
+.profile-content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-content-banner {
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile-content {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.flex-1 {
+  flex: 1;
+
 }
