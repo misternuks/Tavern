@@ -7,9 +7,20 @@
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
       <% end %>
+      <%= f.input :first_name,
+                placeholder: "leave blank if you don't want to change it",
+                required: false,
+                input_html: { autocomplete: "new first name" }%>
+      <%= f.input :last_name,
+                placeholder: "leave blank if you don't want to change it",
+                required: false,
+                input_html: { autocomplete: "new last name" }%>
+      <%= f.input :user_name,
+                placeholder: "leave blank if you don't want to change it",
+                required: false,
+                input_html: { autocomplete: "new user name" }%>
       <%= f.input :password,
                 placeholder: "leave blank if you don't want to change it",
-
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
       <%= f.input :password_confirmation,
@@ -21,15 +32,14 @@
                 input_html: { autocomplete: "current-password" } %>
     </div>
     <div class="form-actions">
-      <%= f.button :submit, "Update", class: "btn btn-info"%>
+      <%= f.button :submit, "Update", class: "btn btn-primary"%>
     </div>
   <% end %>
   <div class="card d-grid gap-2 col-4 mx-auto mt-3 mb-3">
     <div class="card-body">
       <h5 class="card-title">Cancel my account</h5>
       <h6 class="card-subtitle mb-2 text-muted">Unhappy?</h6>
-      <p class="card-text">We are sorry to see you go. If there is anything we can do, please contact us. Otherwise, to cancel your account click below.</p>
-      <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %>
-      <%= link_to "Back", :back %>
+      <p class="card-text">We are sorry to see you go. If there is anything we can do, please contact us. Otherwise, to cancel your account, click below.</p>
+      <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: "btn btn-secondary" %>
     </div>
   </div>

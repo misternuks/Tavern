@@ -1,18 +1,21 @@
-<div class="container">
+<div class="booking-container d-flex align-items-center justify-content-center flex-column">
+  <h1 id ='bookings-title'><strong><%= @bookings.count %> BOOKING(S)</strong></h1>
   <% @bookings.each do |booking| %>
     <div class="card m-3 p-3">
       <h5>Booking # <%= booking.id %></h5>
-    <ul>
-      <li>Game type: <%= booking.game_type %></li>
-      <li>Date: <%= booking.date %></li>
-      <li># of hours in the session: <%= booking.session_hours %></li>
-      <li># of players in the session: <%= booking.player_number %></li>
-    </ul>
-    <%= link_to "View details", booking_path(booking), class: "btn btn-primary" %>
+      <ul>
+        <li>Game type: <%= booking.game_type %></li>
+        <li>Date: <%= booking.date %></li>
+        <li># of hours in the session: <%= booking.session_hours %></li>
+        <li># of players in the session: <%= booking.player_number %></li>
+      </ul>
+      <%= link_to "View details", booking_path(booking), class: "btn btn-primary align-self-start" %>
     </div>
   <% end %>
-  <%= link_to "Make a new booking with a DM",
+  <div class="mb-3">
+    <%= link_to "Make a new booking with a DM",
     dm_profiles_path,
-    class: "btn btn-primary ms-3"
+    class: "btn btn-primary"
   %>
+  </div>
 </div>
