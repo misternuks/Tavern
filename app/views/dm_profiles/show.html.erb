@@ -2,6 +2,53 @@
   <div class="profile-name-img-container">
     <div><%= image_tag("ms-doubt-fire.jpg", alt: "profile picture") %>
     </div>
+
+
+<%# Wooden game navbar %>
+
+<div class="background-container">
+  <div class="bar-container">
+    <div>
+    <span class="label-container">
+      <%= image_tag 'Vampire_The_Masquerade.png', width:"100%", height:"36"%>
+    </span>
+    </div>
+    <div>
+    <span class="label-container">
+      <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp', width:"100%", height:"36"%>
+    </span>
+    </div>
+    <div>
+    <span class="label-container">
+      <%= image_tag 'dnd2.png', width:"100%", height:"42"%>
+    </span>
+    </div>
+    <div>
+    <span class="label-container">
+      <%= image_tag 'WFRP-Core-logo.png', width:"100%", height:"36"%>
+    </span>
+    </div>
+    <div>
+    <span class="label-container">
+      <%= image_tag 'pathfinder.png', width:"100%", height:"24"%>
+    </span>
+    </div>
+  </div>
+</div>
+
+<%# player info section begins %>
+
+<div class="profile-content-container">
+  <div class="profile-content-banner">
+    <p class="flex-1 text-center"><strong>BIOGRAPHY</strong></p>
+    <p class="flex-1 text-center"><strong>XP</strong></p>
+    <p class="flex-1 text-center"><strong>PRICE &amp; AVAILABILITY</strong></p>
+
+  </div>
+  <div class="profile-content">
+    <div class="flex-1 ">
+      <p>Single handed fought off 50 orcs with only a pencil.</p>
+
     <div> <%=@dm_profile.user.user_name.upcase  %>
     </div>
   </div>
@@ -30,6 +77,12 @@
       <p class="flex-1 text-center"><strong>XP</strong></p>
       <p class="flex-1 text-center"><strong>PRICE &amp; AVAILABILITY</strong></p>
     </div>
+
+
+    <div class="flex-1 ">
+      <p>200$hr</p><p>Available Mon - Fri <br>18:00 - 24:00</p>
+      <p><%= link_to 'Book Your Session', new_dm_profile_booking_path(@dm_profile), class: 'btn btn-primary'  %></p>
+
     <div class="profile-content">
       <div class="flex-1 ">
         <p>Single handed fought off 50 orcs with only a pencil.</p>
@@ -49,4 +102,5 @@
         <p><%= link_to 'Book Your Session', new_dm_profile_booking_path(@dm_profile), class: 'btn btn-primary'  %></p>
         <p><%= link_to 'Back', dm_profiles_path, class: 'btn btn-primary'  %></p>
       </div>
+
     </div>
