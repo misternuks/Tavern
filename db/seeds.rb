@@ -12,25 +12,21 @@ DmProfile.destroy_all
 User.destroy_all
 
 puts 'Contacting Dr. Gemima...'
+count = 0
 10.times do
   User.create!(
     email: Faker::Internet.email,
-    password: "123456"
+    password: "123456",
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    user_name: Faker::Internet.username
   )
-end
-puts 'Oh my god, my waffle!'
-
-# DM Profiles
-puts "ROUND 2: FIGHT!"
-puts 'Warming the syrup 2...'
-
-puts 'Contacting Dr. Gemima 2...'
-5.times do
   DmProfile.create!(
     price: rand(1..10),
     experience: Faker::Quote.mitch_hedberg,
     availability: %i[Monday Tuesday Wednesday Thursday Friday Saturday Sunday].sample(rand(1..4)).to_sentence,
-    user_id: User.all.to_a.sample.id
+    user_id: User.last.id
   )
+  puts count += 1
 end
-puts 'Oh my god, my waffle 2!'
+puts 'Oh my god, my waffle!'

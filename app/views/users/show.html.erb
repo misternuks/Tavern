@@ -1,2 +1,10 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="container p-5 m-5">
+  <div class="card">
+    <%= image_tag "http://source.unsplash.com/featured/?face&#{rand(1000)}", class: "h-25" %>
+    <div class="card p-3 m-3">
+      <h2><%= @user.user_name %></h2>
+      <p>Name: <%= @user.first_name %> <%= @user.last_name %></p>
+    </div>
+  <%= link_to 'Register as a DM', dm_profiles_path, class: 'btn btn-info'  %>
+  </div>
+</div>
