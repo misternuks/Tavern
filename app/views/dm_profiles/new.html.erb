@@ -1,0 +1,11 @@
+<div class="container">
+  <%= simple_form_for [@dm_profile], html: { class: "cmint"} do |f| %>
+    <%= f.input :price, :collection => (1..10) %>
+    <%= f.input :experience, :label => 'describe your experience as a game master: total time GMing, games you can GM, etc.' %>
+    <%= f.input :availability, :label => 'When are you available to host (i.e. list days and times)?' %>
+    <div class="d-grid gap-2 col-3 mx-auto">
+      <%= f.button :submit, "Create GM Profile", class: "btn btn-primary"%>
+      <input class="btn btn-success" type="reset" value="Reset form">
+    </div>
+  <% end %>
+</div>
