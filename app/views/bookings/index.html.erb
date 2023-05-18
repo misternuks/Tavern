@@ -9,6 +9,7 @@
             <li>Date: <%= booking.date %></li>
             <li>Session length: <%= booking.session_hours %> hours</li>
             <li>Players: <%= booking.player_number %></li>
+            <li>Status: <%= booking.status.capitalize %></li>
           </ul>
           <% case booking.game_type %>
           <% when 'Dungeons and Dragons' %>
