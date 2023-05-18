@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 puts 'Warming the syrup...'
+Booking.destroy_all
 DmProfile.destroy_all
 User.destroy_all
 
@@ -27,8 +28,8 @@ puts 'Contacting Dr. Gemima 2...'
 5.times do
   DmProfile.create!(
     price: rand(1..10),
-    experience: Faker::Lorem.characters(number: 10),
-    availability: Faker::Lorem.characters(number: 10),
+    experience: Faker::Quote.mitch_hedberg,
+    availability: %i[Monday Tuesday Wednesday Thursday Friday Saturday Sunday].sample(rand(1..4)).to_sentence,
     user_id: User.all.to_a.sample.id
   )
 end
