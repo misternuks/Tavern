@@ -4,5 +4,5 @@ class DmProfile < ApplicationRecord
 
   validates :price, presence: true
   validates :experience, presence: true
-  validates :availability, length: { minimum: 10 }
+  validates :availability, presence: true
 end
