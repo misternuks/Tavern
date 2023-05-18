@@ -1,17 +1,17 @@
-<div class="container">
+<div class="container m-5 p-5">
   <div class="div">
     <h1>Dm Profiles</h1>
   </div>
   <ul>
     <% @dm_profiles.each do |dm_profile| %>
-      <div class="card-product">
+      <div class="card-product h-100">
         <%= image_tag "http://source.unsplash.com/featured/avatar&#{rand(1000)}" %>
         <div class="card-product-infos">
           <h2><%= dm_profile.user.email %></h2>
           <p><%= dm_profile.experience %></p>
           <p>Availability: <%= dm_profile.availability %></p>
           <p>Price per hour: $<%= dm_profile.price %></p>
-          <p><%= link_to 'Visit Profile', dm_profile_path(dm_profile)  %></p>
+          <p><%= link_to 'Visit Profile', dm_profile_path(dm_profile), class: "text-decoration-none" %></p>
         </div>
       </div>
     <% end %>
