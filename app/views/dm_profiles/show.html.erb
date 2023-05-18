@@ -1,7 +1,10 @@
 ,<div class="showpage-container">
-    <div>
+    <div class="profile-name-img-container">
+      <div><%= image_tag("ms-doubt-fire.jpg", alt: "profile picture") %>
+      </div>
+      <div> <%=@dm_profile.user.user_name.upcase  %>
+      </div>
     </div>
-</div>
 
 <%# Wooden game navbar %>
 
@@ -49,4 +52,3 @@
 
   </div>
 </div>
-
