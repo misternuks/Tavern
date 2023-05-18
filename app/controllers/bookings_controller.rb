@@ -3,6 +3,8 @@ class BookingsController < ApplicationController
 
   def index
     @bookings = policy_scope(Booking)
+    @user_bookings = current_user.bookings
+    @dm_bookings = current_user.dm_profile.present? ? @bookings.select{|booking| booking.dm_profile_id == current_user.dm_profile.id} : []
   end
 
   def show
@@ -35,6 +37,20 @@ class BookingsController < ApplicationController
     @booking.destroy
     authorize @booking
     redirect_to bookings_path
+  end
+
+  def edit
+    @booking = Booking.find(params[:id])
+    authorize @booking
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    if @booking.update(booking_params)
+      redirect_to booking_path(@booking)
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private
