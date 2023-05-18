@@ -1,8 +1,8 @@
 .showpage-container {
-  width: 100%;
-  height: 100vh;
+  height: 100%;
   justify-content: center;
   overflow: hidden; /* Prevent scrolling beyond the container */
+  background-size: cover;
 }
 
 .showpage-container::before {
@@ -36,12 +36,21 @@
   justify-content: space-around;
   align-content: center;
   font-size: 24px;
+  background-color: rgba(4, 57, 94, 0.3); /* Adjust the alpha value (0.7 in this example) to control the transparency */
+  margin: 16px;
+  border-radius: 16px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .profile-content {
   display: flex;
   justify-content: space-around;
   padding: 24px;
+  background-color: rgba(4, 57, 94, 0.3); /* Adjust the alpha value (0.7 in this example) to control the transparency */
+  margin: 24px;
+  border-radius: 16px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+
 
 }
 
@@ -65,4 +74,8 @@
   justify-content: center;
   text-align: center;
   font-size: 16px;
+}
+
+.btn.btn-primary {
+  border-radius: 10px; /* Replace 10px with your desired border radius value */
 }
