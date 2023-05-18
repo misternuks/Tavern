@@ -1,11 +1,13 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  background-image: url("logo_bg_plank.jpg");
-  // background-repeat: no-repeat;
-  // background-size: cover;
   padding: 32px;
   grid-gap: 32px;
+  width: 100%;
+}
+
+.card-container{
+  text-align: center;
 }
 
 // Smallest device
@@ -42,6 +44,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+
 
 .card-trip {
   overflow: hidden;
