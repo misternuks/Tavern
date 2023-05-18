@@ -1,7 +1,17 @@
 .card {
-  z-index: 9999;
+  z-index: 0;
+  width: 60%;
 }
 
 .card-product-infos {
   padding: 16px !important;
+}
+
+.card > .btn-primary {
+  width: 20%
+}
+
+body {
+  background-image: url('maxresdefault.jpg');
+  background-size: cover;
 }
