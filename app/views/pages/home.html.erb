@@ -4,73 +4,171 @@
     <h1><strong>WELCOME TO THE TAVERN</strong></h1>
     <%= link_to 'Book now', dm_profiles_path, class:"btn btn-flat" %>
   </div>
+  <div class="fade">
+  </div>
 </div>
 
-<!--category bar-->
-<div class="bar-container">
-  <span class="label-container">
-    <%= image_tag 'Vampire_The_Masquerade.png', width:"100%", height:"36"%>
-  </span>
-  <span class="label-container">
-    <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp', width:"100%", height:"36"%>
-  </span>
-  <span class="label-container">
-    <%= image_tag 'dnd2.png', width:"100%", height:"42"%>
-  </span>
-  <span class="label-container">
-    <%= image_tag 'WFRP-Core-logo.png', width:"100%", height:"36"%>
-  </span>
-  <span class="label-container">
-    <%= image_tag 'pathfinder.png', width:"100%", height:"24"%>
-  </span>
+<!--category cards grid-->
+<div class="card-section">
+  <h1>Filter by games</h1>
+  <div class="card-body">
+
+  <a href="https://www.mythrillfiction.com/the-dark-rider" alt="Mythrill" target="_blank">
+  <div class="card">
+    <div class="wrapper">
+        <%= image_tag 'vm_wallpaper.webp',class:"cover-image" %>
+    </div>
+    <%= image_tag 'Vampire_The_Masquerade.png',class:"title" %>
+    <%= image_tag 'vm_character.webp',class:"character" %>
+  </div>
+  </a>
+
+  <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank">
+    <div class="card">
+      <div class="wrapper">
+        <%= image_tag 'call-of-cthulhu-wallpaper.jpg',class:"cover-image" %>
+      </div>
+      <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp',class:"title" %>
+      <%= image_tag 'coc_character.jpg',class:"character" %>
+    </div>
+  </a>
+
+  <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank">
+    <div class="card">
+      <div class="wrapper">
+        <%= image_tag 'call-of-cthulhu-wallpaper.jpg',class:"cover-image" %>
+      </div>
+      <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp',class:"title" %>
+      <%= image_tag 'coc_character.jpg',class:"character" %>
+    </div>
+  </a>
+
+  <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank">
+    <div class="card">
+      <div class="wrapper">
+        <%= image_tag 'call-of-cthulhu-wallpaper.jpg',class:"cover-image" %>
+      </div>
+      <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp',class:"title" %>
+      <%= image_tag 'coc_character.jpg',class:"character" %>
+    </div>
+  </a>
+
+  <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank">
+    <div class="card">
+      <div class="wrapper">
+        <%= image_tag 'call-of-cthulhu-wallpaper.jpg',class:"cover-image" %>
+      </div>
+      <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp',class:"title" %>
+      <%= image_tag 'coc_character.jpg',class:"character" %>
+    </div>
+  </a>
+  </div>
 </div>
 
-<!--dm cards grid-->
-<div class="card-container">
-  <div class="cards">
-    <div class="card-trip">
-      <%= image_tag 'legolis.jpg', width:"100%", height:"36"%>
-      <div class="card-trip-infos">
-        <div>
-          <h2>Legolis</h2>
-          <p>780 hrs 220 sessions</p>
-        </div>
-        <h2 class="card-trip-pricing">$25 per hr</h2>
-        <%= image_tag 'legolis.jpg', class:"card-trip-user avatar-bordered"%>
-      </div>
+<div class="profile-section">
+  <h1>Game Masters</h1>
+  <div class="profile-container">
+  <article class="profile-card">
+    <div class="profile-image" style="width: 175px; height:175px;">
+       <%= image_tag 'legolis.jpg'%>
     </div>
-      <div class="card-trip">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Title here</h2>
-          <p>Short description here!</p>
-        </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      </div>
+    <h2 class="profile-username">Legolis</h2>
+    <small class="profile-user-handle">@elena_zoldado</small>
+    <div class="profile-actions">
+      <button class="btn btn--primary">Reserve</button>
+      <button class="btn btn--secondary">
+        $150
+      </button>
     </div>
-      <div class="card-trip">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Title here</h2>
-          <p>Short description here!</p>
-        </div>
-        <h2 class="card-trip-pricing">£99.99</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      </div>
+    <div class="profile-actions">
+      <a href="#" class="btn btn--icon">
+        <%= image_tag 'Vampire_The_Masquerade.png'%>
+      </a>
+      <a href="#" class="btn btn--icon">
+        <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp'%>
+      </a>
+      <a href="#" class="btn btn--icon">
+        <%= image_tag 'pathfinder.png'%>
+      </a>
     </div>
-      <div class="card-trip">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Frodo</h2>
-          <p>800 hours</p>
-        </div>
-        <h2 class="card-trip-pricing">$20 per hr</h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-      </div>
+  </article>
+
+  <article class="profile-card">
+    <div class="profile-image" style="width: 175px; height:175px;">
+       <%= image_tag 'legolis.jpg'%>
     </div>
+    <h2 class="profile-username">Legolis</h2>
+    <small class="profile-user-handle">700 hrs</small>
+    <div class="profile-actions">
+      <button class="btn btn--primary">Reserve</button>
+      <button class="btn btn--secondary">
+        $150
+      </button>
+    </div>
+    <div class="profile-actions">
+      <a href="#" class="btn btn--icon">
+        <%= image_tag 'warhammer.png'%>
+      </a>
+      <a href="#" class="btn btn--icon">
+        <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp'%>
+      </a>
+      <a href="#" class="btn btn--icon">
+        <%= image_tag 'pathfinder.png'%>
+      </a>
+    </div>
+  </article>
+
+
+  <article class="profile-card">
+    <div class="profile-image" style="width: 175px; height:175px;">
+       <%= image_tag 'legolis.jpg'%>
+    </div>
+    <h2 class="profile-username">Gandalf</h2>
+    <small class="profile-user-handle">15 hrs</small>
+    <div class="profile-actions">
+      <button class="btn btn--primary">Reserve</button>
+      <button class="btn btn--secondary">
+        $150
+      </button>
+    </div>
+    <div class="profile-actions">
+      <a href="#" class="btn btn--icon">
+        <%= image_tag 'Vampire_The_Masquerade.png'%>
+      </a>
+      <a href="#" class="btn btn--icon">
+        <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp'%>
+      </a>
+      <a href="#" class="btn btn--icon">
+        <%= image_tag 'pathfinder.png'%>
+      </a>
+    </div>
+  </article>
+
+  <article class="profile-card">
+    <div class="profile-image" style="width: 175px; height:175px;">
+       <%= image_tag 'legolis.jpg'%>
+    </div>
+    <h2 class="profile-username">Legolis</h2>
+    <small class="profile-user-handle">@elena_zoldado</small>
+    <div class="profile-actions">
+      <button class="btn btn--primary">Reserve</button>
+      <button class="btn btn--secondary">
+        $150
+      </button>
+    </div>
+    <div class="profile-actions">
+      <a href="#" class="btn btn--icon">
+        <%= image_tag 'Vampire_The_Masquerade.png'%>
+      </a>
+      <a href="#" class="btn btn--icon">
+        <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp'%>
+      </a>
+      <a href="#" class="btn btn--icon">
+        <%= image_tag 'pathfinder.png'%>
+      </a>
+    </div>
+  </article>
+
+
   </div>
 </div>
