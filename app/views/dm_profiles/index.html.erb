@@ -1,20 +1,31 @@
-<div class="container m-5 p-5">
-  <div class="div">
-    <h1>Dm Profiles</h1>
-  </div>
-  <ul>
+<div class="profile-section">
+    <h1 style="margin-top: 72px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">GAME MASTERS</h1>
+    <div class="profile-container">
     <% @dm_profiles.each do |dm_profile| %>
-      <div class="card-product h-100">
-        <%= image_tag "http://source.unsplash.com/featured/avatar&#{rand(1000)}" %>
-        <div class="card-product-infos">
-          <h2><%= dm_profile.user.email %></h2>
-          <p><%= dm_profile.experience %></p>
-          <p>Availability: <%= dm_profile.availability %></p>
-          <p>Price per hour: $<%= dm_profile.price %></p>
-          <p><%= link_to 'Visit Profile', dm_profile_path(dm_profile), class: "text-decoration-none" %></p>
+      <article class="profile-card">
+        <div class="profile-image" style="width: 175px; height:175px;">
+          <%= image_tag "http://source.unsplash.com/featured/avatar&#{rand(1000)}" %>
         </div>
-      </div>
-    <% end %>
-  </ul>
-  <p><%= link_to 'Back', root_path, class: 'btn btn-primary'  %></p>
+        <h2 class="profile-username"><%= dm_profile.user.user_name %></h2>
+        <small class="profile-user-handle"><%= dm_profile.experience %></small>
+        <div class="profile-actions">
+          <button class="profile-button profile-button--primary">Reserve</button>
+          <button class="profile-button profile-button--secondary">
+            $<%= dm_profile.price %>/h
+          </button>
+        </div>
+        <div class="profile-actions">
+          <a href="#" class="profile-button profile-button--icon">
+            <%= image_tag 'dnd2.png'%>
+          </a>
+          <a href="#" class="profile-button profile-button--icon">
+            <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp'%>
+          </a>
+          <a href="#" class="profile-button profile-button--icon">
+            <%= image_tag 'pathfinder.png'%>
+          </a>
+        </div>
+      </article>
+      <% end %>
+  </div>
 </div>
