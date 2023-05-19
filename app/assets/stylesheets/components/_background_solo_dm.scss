@@ -1,7 +1,6 @@
 .showpage-container {
 
   justify-content: center;
-  overflow: hidden; /* Prevent scrolling beyond the container */
   background-size: cover;
 }
 
@@ -29,7 +28,6 @@
   background-position: center;
   z-index: -1;
 }
-
 
 .profile-flex {
   display: flex;
