@@ -1,6 +1,6 @@
 <div class="profile-section">
-    <h1 style="margin-top: 72px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">GAME MASTERS</h1>
-    <div class="profile-container">
+  <h1 style="margin-top: 72px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">GAME MASTERS</h1>
+  <div class="profile-container">
     <% @dm_profiles.each do |dm_profile| %>
       <article class="profile-card">
         <div class="profile-image" style="width: 175px; height:175px;">
@@ -9,7 +9,9 @@
         <h2 class="profile-username"><%= dm_profile.user.user_name %></h2>
         <small class="profile-user-handle"><%= dm_profile.experience %></small>
         <div class="profile-actions">
-          <button class="profile-button profile-button--primary">Reserve</button>
+          <div>
+            <%= link_to 'Reserve', dm_profile_path(dm_profile), class: "btn btn-primary text-decoration-none" %>
+          </div>
           <button class="profile-button profile-button--secondary">
             $<%= dm_profile.price %>/h
           </button>
@@ -26,6 +28,6 @@
           </a>
         </div>
       </article>
-      <% end %>
+    <% end %>
   </div>
 </div>
