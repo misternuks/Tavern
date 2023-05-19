@@ -3,5 +3,10 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     authorize @user
+    @dm_profile = DmProfile.new
+    authorize @dm_profile
   end
+
+
+
 end
