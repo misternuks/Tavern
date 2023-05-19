@@ -1,6 +1,6 @@
 <div class="showpage-container">
   <div class="profile-name-img-container">
-    <div><%= image_tag("ms-doubt-fire.jpg", alt: "profile picture") %>
+    <div><%= image_tag("http://source.unsplash.com/featured/avatar&#{rand(1000)}", alt: "profile picture") %>
     </div>
     <div> <%=@dm_profile.user.user_name.upcase  %>
     </div>
@@ -44,23 +44,18 @@
     </div>
     <div class="profile-content">
       <div class="flex-1 ">
-        <p>Single handed fought off 50 orcs with only a pencil.</p>
+        <p><%= @dm_profile.experience %></p>
       </div>
       <div class="flex-1 ">
-        <p>Dungeons and Dragons<br>
-          200hr</p>
-        <p>Call of Cthulu<br>
-          2000hr</p>
-        <p>Vampire The Masquerade<br>
-          25,000hr</p>
+        <p><%= @dm_profile.experience %></p>
       </div>
       <div class="flex-1 ">
-        <p>200$hr</p>
-        <p>Available Mon - Fri <br>
-          18:00 - 24:00</p>
+        <p>Price: <%= @dm_profile.price %>$ per hour</p>
+        <p>Available for booking on: <%= @dm_profile.availability %></p>
         <p><%= link_to 'Book Your Session', new_dm_profile_booking_path(@dm_profile), class: 'btn btn-primary'  %></p>
         <p><%= link_to 'Back', dm_profiles_path, class: 'btn btn-primary'  %></p>
       </div>
     </div>
   </div>
+</div>
 </div>
