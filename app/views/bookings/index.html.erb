@@ -13,7 +13,7 @@
             <li>Booking id: <%= booking.dm_profile.id %></li>
             <li>User id: <%= current_user.id %></li>
           </ul>
-          <% case booking.game_type %>
+        <% case booking.game_type %>
           <% when 'Dungeons and Dragons' %>
           <% gamelogo = 'dnd2.png' %>
           <% when 'Vampire The Masquerade' %>

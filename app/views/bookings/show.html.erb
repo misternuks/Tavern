@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="card p-3 m-3">
+  <div class="card p-3 m-3 booking-card-container">
     <h1>Booking # <%= @booking.id %></h1>
     <ul>
       <li>Game type: <%= @booking.game_type %></li>
@@ -8,13 +8,52 @@
       <li># of players in the session: <%= @booking.player_number %></li>
       <li>Details: <%= @booking.details %></li>
     </ul>
+    <% case @booking.game_type %>
+      <% when 'Dungeons and Dragons' %>
+      <% gamelogo = 'dnd2.png' %>
+      <% when 'Vampire The Masquerade' %>
+      <% gamelogo = 'Vampire_The_Masquerade.png' %>
+      <% when 'Pathfinder' %>
+      <% gamelogo = 'pathfinder.png' %>
+      <% when 'Call Of Cthulu' %>
+      <% gamelogo = 'call-of-cthulhu-logo-1_1200x1200.webp' %>
+      <% when 'Warhammer Fantasy Roleplay' %>
+      <% gamelogo = 'WFRP-Core-logo.png' %>
+    <% end %>
+    <%= image_tag gamelogo, class: 'booking-infos-logo' %>
     <%= link_to booking_path(@booking),
     class: "m-2",
     data: { turbo_method: :delete,
     turbo_confirm: "Do you want to delete this bookmark?" } do %>
-      <i class="fa-solid fa-trash text-muted"></i>
+      <i class="fa-solid fa-trash text-muted" style="display:flex; align-self: flex-end;"></i>
     <% end %>
   </div>
+
+    <article class="profile-card">
+    <div class="profile-image" style="width: 175px; height:175px;">
+       <%= image_tag 'legolis.jpg'%>
+    </div>
+    <h2 class="profile-username">Legolis</h2>
+    <small class="profile-user-handle">@elena_zoldado</small>
+    <div class="profile-actions">
+      <button class="profile-button profile-button--primary">Cancel</button>
+      <button class="profile-button profile-button--secondary">
+        $150
+      </button>
+    </div>
+    <div class="profile-actions">
+      <a href="#" class="profile-button profile-button--icon">
+        <%= image_tag 'Vampire_The_Masquerade.png'%>
+      </a>
+      <a href="#" class="profile-button profile-button--icon">
+        <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp'%>
+      </a>
+      <a href="#" class="profile-button profile-button--icon">
+        <%= image_tag 'pathfinder.png'%>
+      </a>
+    </div>
+  </article>
+
   <%= link_to "Back to all bookings",
     bookings_path,
     class: "btn btn-primary ms-3"
