@@ -1,43 +1,42 @@
 <div class="booking-container d-flex align-items-center justify-content-center flex-column">
-  <h1 id ='bookings-title'><strong><%= @user_bookings.count + @dm_bookings.count %> BOOKING(S)</strong></h1>
-  <div class="booking-card-container"><% @bookings.each do |booking| %>
-      <% if current_user.id == booking.user_id || current_user.dm_profile.present? %>
-        <div class="booking-card m-3 p-3">
-          <h5>Booking with <strong> <%= booking.dm_profile.user.first_name.upcase %></strong></h5>
-          <div class="booking-infos">
-            <ul class = 'booking-infos-list'>
-              <li>Game: <%= booking.game_type %></li>
-              <li>Date: <%= booking.date %></li>
-              <li>Session length: <%= booking.session_hours %> hours</li>
-              <li>Players: <%= booking.player_number %></li>
-              <li>Status: <%= booking.status.capitalize %></li>
-              <li>Booking id: <%= booking.dm_profile.id %></li>
-              <li>User id: <%= current_user.id %></li>
-            </ul>
-            <% case booking.game_type %>
-            <% when 'Dungeons and Dragons' %>
-            <% gamelogo = 'dnd2.png' %>
-            <% when 'Vampire The Masquerade' %>
-            <% gamelogo = 'Vampire_The_Masquerade.png' %>
-            <% when 'Pathfinder' %>
-            <% gamelogo = 'pathfinder.png' %>
-            <% when 'Call Of Cthulu' %>
-            <% gamelogo = 'call-of-cthulhu-logo-1_1200x1200.webp' %>
-            <% when 'Warhammer Fantasy Roleplay' %>
-            <% gamelogo = 'WFRP-Core-logo.png' %>
-          <% end %>
-          <%= image_tag gamelogo, alt: "Logo of the game that will be played", class: 'booking-infos-logo' %>
-        </div>
-        <div class="booking-buttons">
-          <%= link_to "View details", booking_path(booking), class: "btn btn-flat p-3" %>
-          <% if current_user.dm_profile.present? && current_user.id == booking.dm_profile.user_id %>
-            <%= link_to "Accept", booking_path(booking), class: "btn btn-flat p-3" %>
-            <%= link_to "Reject", booking_path(booking), class: "btn btn-flat p-3", data: { turbo_method: :delete,
-    turbo_confirm: "Do you want to reject this booking?" } %>
-          <% end %></div>
+  <h1 id ='bookings-title'><strong><%= @combined_bookings.count %> BOOKING(S)</strong></h1>
+  <div class="booking-card-container"><% @combined_bookings.each do |booking| %>
+      <div class="booking-card m-3 p-3">
+        <h5>Booking with <strong> <%= booking.dm_profile.user.first_name.upcase %></strong></h5>
+        <div class="booking-infos">
+          <ul class = 'booking-infos-list'>
+            <li>Game: <%= booking.game_type %></li>
+            <li>Date: <%= booking.date %></li>
+            <li>Session length: <%= booking.session_hours %> hours</li>
+            <li>Players: <%= booking.player_number %></li>
+            <li>Status: <%= booking.status.capitalize %></li>
+            <li>Booking id: <%= booking.dm_profile.id %></li>
+            <li>User id: <%= current_user.id %></li>
+          </ul>
+          <% case booking.game_type %>
+          <% when 'Dungeons and Dragons' %>
+          <% gamelogo = 'dnd2.png' %>
+          <% when 'Vampire The Masquerade' %>
+          <% gamelogo = 'Vampire_The_Masquerade.png' %>
+          <% when 'Pathfinder' %>
+          <% gamelogo = 'pathfinder.png' %>
+          <% when 'Call Of Cthulu' %>
+          <% gamelogo = 'call-of-cthulhu-logo-1_1200x1200.webp' %>
+          <% when 'Warhammer Fantasy Roleplay' %>
+          <% gamelogo = 'WFRP-Core-logo.png' %>
+        <% end %>
+        <%= image_tag gamelogo, alt: "Logo of the game that will be played", class: 'booking-infos-logo' %>
       </div>
-    <% end %>
-  <% end %></div>
+      <div class="booking-buttons">
+        <%= link_to "View details", booking_path(booking), class: "btn btn-flat p-3" %>
+        <% if current_user.dm_profile.present? && current_user.id == booking.dm_profile.user_id %>
+          <%= link_to "Accept", booking_path(booking), class: "btn btn-flat p-3" %>
+          <%= link_to "Reject", booking_path(booking), class: "btn btn-flat p-3", data: { turbo_method: :delete,
+    turbo_confirm: "Do you want to reject this booking?" } %>
+        <% end %></div>
+    </div>
+  <% end %>
+</div>
 <div class="mb-3">
   <%= link_to "Make a new booking with a DM",
     dm_profiles_path,
