@@ -1,34 +1,33 @@
-<div class="booking-container d-flex align-items-center justify-content-center flex-column">
-  <h1 id ='bookings-title'><strong><%= @combined_bookings.count %> BOOKING(S)</strong></h1>
-  <div class="booking-card-container"><% @combined_bookings.each do |booking| %>
-      <div class="booking-card m-3 p-3">
-        <h5>Booking with <strong> <%= booking.dm_profile.user.first_name.upcase %></strong></h5>
-        <div class="booking-infos">
-          <ul class = 'booking-infos-list'>
+<div class="mt-5 booking-container d-flex align-items-center justify-content-center flex-column">
+  <h1 id ='bookings-title' class="mt-5"><strong><%= @combined_bookings.count %> BOOKING(S)</strong></h1>
+  <% @combined_bookings.each do |booking| %>
+      <div class="booking-card m-5 p-5 w-50">
+        <h3>Booking with <strong> <%= booking.dm_profile.user.user_name.upcase %></strong></h3>
+        <div class="booking-infos flex-column">
+        <div class="d-flex flex-shrink-0">
+          <% case booking.game_type %>
+            <% when 'Dungeons and Dragons' %>
+            <% gamelogo = 'dnd2.png' %>
+            <% when 'Vampire The Masquerade' %>
+            <% gamelogo = 'Vampire_The_Masquerade.png' %>
+            <% when 'Pathfinder' %>
+            <% gamelogo = 'pathfinder.png' %>
+            <% when 'Call Of Cthulu' %>
+            <% gamelogo = 'call-of-cthulhu-logo-1_1200x1200.webp' %>
+            <% when 'Warhammer Fantasy Roleplay' %>
+            <% gamelogo = 'WFRP-Core-logo.png' %>
+          <% end %>
+          <%= image_tag gamelogo, alt: "Logo of the game that will be played", class: 'booking-infos-logo' %>
+        </div>
+          <ul class = 'booking-infos-list mt-3'>
             <li>Game: <%= booking.game_type %></li>
             <li>Date: <%= booking.date %></li>
             <li>Session length: <%= booking.session_hours %> hours</li>
             <li>Players: <%= booking.player_number %></li>
             <li>Status: <%= booking.status.capitalize %></li>
-            <li>Booking id: <%= booking.dm_profile.id %></li>
-            <li>User id: <%= current_user.id %></li>
           </ul>
-        <% case booking.game_type %>
-          <% when 'Dungeons and Dragons' %>
-          <% gamelogo = 'dnd2.png' %>
-          <% when 'Vampire The Masquerade' %>
-          <% gamelogo = 'Vampire_The_Masquerade.png' %>
-          <% when 'Pathfinder' %>
-          <% gamelogo = 'pathfinder.png' %>
-          <% when 'Call Of Cthulu' %>
-          <% gamelogo = 'call-of-cthulhu-logo-1_1200x1200.webp' %>
-          <% when 'Warhammer Fantasy Roleplay' %>
-          <% gamelogo = 'WFRP-Core-logo.png' %>
-        <% end %>
-        <%= image_tag gamelogo, alt: "Logo of the game that will be played", class: 'booking-infos-logo' %>
       </div>
       <div class="booking-buttons">
-        <%= link_to "View details", booking_path(booking), class: "btn btn-flat p-3" %>
         <% if current_user.dm_profile.present? && current_user.id == booking.dm_profile.user_id %>
           <% if booking.pending? %>
             <%= simple_form_for booking do |f| %>
@@ -41,7 +40,7 @@
               <%= f.submit 'Decline', class: 'btn btn-light' %>
             <% end %>
           <% else %>
-            <p class='booking-tag'><%= booking.status %></p>
+            <p class='booking-tag'>Your booking has been <%= booking.status %>.</p>
           <% end %>
 
           <%#= link_to "Accept", booking_path(booking), class: "btn btn-flat p-3" %>
@@ -55,11 +54,10 @@
       </div>
     </div>
   <% end %>
-</div>
-<div class="mb-3">
-  <%= link_to "Make a new booking with a DM",
-    dm_profiles_path,
-    class: "btn btn-flat"
-  %>
-</div>
+  <div class="mb-3">
+    <%= link_to "Make a new booking with a DM",
+      dm_profiles_path,
+      class: "btn btn-primary p-3 mb-5 text-white"
+    %>
+  </div>
 </div>

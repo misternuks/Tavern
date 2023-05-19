@@ -37,10 +37,10 @@
 
 .booking-infos-list {
   list-style-type: none;
+  font-size: 20px;
 }
 
 .booking-infos-logo {
-  height: 100px;
   width: 100%;
 }
 
@@ -50,7 +50,8 @@
 }
 
 .booking-card {
-  background-color: white;
+  background-color: rgb(251, 244, 238);
+  filter: drop-shadow(0 0 0.75rem rgb(77, 52, 30));
 }
 
 
