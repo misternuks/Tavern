@@ -11,7 +11,7 @@
 }
 
 .card-section h1 {
-  margin: 0;
+    margin-top: 24px ;
     color: white;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     text-align: center;
@@ -41,13 +41,15 @@
   padding: 0 36px;
   perspective: 2500px;
   margin: 0 50px;
-  background: #191c29;
+  background:  #032740;
+
 }
 
 .cover-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 16px;
 }
 
 .wrapper {
@@ -119,6 +121,7 @@
   position: absolute;
   z-index: -1;
   right: 0px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .test-card:hover .character {

@@ -2,170 +2,160 @@
 <div class="banner">
   <div>
     <h1><strong>WELCOME TO THE TAVERN</strong></h1>
-    <%= link_to 'Book now', dm_profiles_path, class:"btn btn-flat" %>
+    <%= link_to 'Book now', dm_profiles_path, class: "btn btn-flat", style: "margin-top: 16px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);" %>
   </div>
   <div class="fade">
   </div>
 </div>
 <!--category cards grid-->
 <div class="card-section">
-  <h1>Filter by games</h1>
-  <div class="card-body">
-
-  <a href="https://www.mythrillfiction.com/the-dark-rider" alt="Mythrill" target="_blank">
-  <div class="test-card">
-    <div class="wrapper">
-        <%= image_tag 'vm_wallpaper.webp',class:"cover-image" %>
-    </div>
-    <%= image_tag 'Vampire_The_Masquerade.png',class:"title" %>
-    <%= image_tag 'vm_character.webp',class:"character" %>
-  </div>
-  </a>
-
-  <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank">
-    <div class="test-card">
-      <div class="wrapper">
-        <%= image_tag 'call-of-cthulhu-wallpaper.jpg',class:"cover-image" %>
+  <h1 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">FILTER BY GAMES</h1>
+  <div class="card-body d-flex justify-content-between ">
+    <a href="https://www.mythrillfiction.com/the-dark-rider" alt="Mythrill" target="_blank">
+      <div class="test-card">
+        <div class="wrapper">
+          <%= image_tag 'vm_wallpaper.webp',class:"cover-image" %>
+        </div>
+        <%= image_tag 'Vampire_The_Masquerade.png',class:"title" %>
+        <%= image_tag 'vm_character.webp',class:"character" %>
       </div>
-      <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp',class:"title" %>
-      <%= image_tag 'coc_character.jpg',class:"character" %>
-    </div>
-  </a>
-
-  <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank">
-    <div class="test-card">
-      <div class="wrapper">
-        <%= image_tag 'call-of-cthulhu-wallpaper.jpg',class:"cover-image" %>
+    </a>
+    <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank">
+      <div class="test-card">
+        <div class="wrapper">
+          <%= image_tag 'call-of-cthulhu-wallpaper.jpg',class:"cover-image" %>
+        </div>
+        <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp',class:"title" %>
+        <%= image_tag 'coc_character.jpg',class:"character" %>
       </div>
-      <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp',class:"title" %>
-      <%= image_tag 'coc_character.jpg',class:"character" %>
-    </div>
-  </a>
-
-  <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank">
-    <div class="test-card">
-      <div class="wrapper">
-        <%= image_tag 'call-of-cthulhu-wallpaper.jpg',class:"cover-image" %>
+    </a>
+    <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank">
+      <div class="test-card">
+        <div class="wrapper">
+          <%= image_tag 'call-of-cthulhu-wallpaper.jpg',class:"cover-image" %>
+        </div>
+        <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp',class:"title" %>
+        <%= image_tag 'coc_character.jpg',class:"character" %>
       </div>
-      <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp',class:"title" %>
-      <%= image_tag 'coc_character.jpg',class:"character" %>
-    </div>
-  </a>
-
-  <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank">
-    <div class="test-card">
-      <div class="wrapper">
-        <%= image_tag 'call-of-cthulhu-wallpaper.jpg',class:"cover-image" %>
+    </a>
+    <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank">
+      <div class="test-card">
+        <div class="wrapper">
+          <%= image_tag 'call-of-cthulhu-wallpaper.jpg',class:"cover-image" %>
+        </div>
+        <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp',class:"title" %>
+        <%= image_tag 'coc_character.jpg',class:"character" %>
       </div>
-      <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp',class:"title" %>
-      <%= image_tag 'coc_character.jpg',class:"character" %>
-    </div>
-  </a>
+    </a>
+    <a href="https://www.mythrillfiction.com/force-mage" alt="Mythrill" target="_blank">
+      <div class="test-card">
+        <div class="wrapper">
+          <%= image_tag 'call-of-cthulhu-wallpaper.jpg',class:"cover-image" %>
+        </div>
+        <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp',class:"title" %>
+        <%= image_tag 'coc_character.jpg',class:"character" %>
+      </div>
+    </a>
   </div>
 </div>
-
 <div class="profile-section">
-  <h1>Game Masters</h1>
+  <h1 style="margin-top: 24px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">GAME MASTERS</h1>
   <div class="profile-container">
-  <article class="profile-card">
-    <div class="profile-image" style="width: 175px; height:175px;">
-       <%= image_tag 'legolis.jpg'%>
-    </div>
-    <h2 class="profile-username">Legolis</h2>
-    <small class="profile-user-handle">@elena_zoldado</small>
-    <div class="profile-actions">
-      <button class="profile-button profile-button--primary">Reserve</button>
-      <button class="profile-button profile-button--secondary">
-        $150
-      </button>
-    </div>
-    <div class="profile-actions">
-      <a href="#" class="profile-button profile-button--icon">
-        <%= image_tag 'Vampire_The_Masquerade.png'%>
-      </a>
-      <a href="#" class="profile-button profile-button--icon">
-        <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp'%>
-      </a>
-      <a href="#" class="profile-button profile-button--icon">
-        <%= image_tag 'pathfinder.png'%>
-      </a>
-    </div>
-  </article>
-
-  <article class="profile-card">
-    <div class="profile-image" style="width: 175px; height:175px;">
-       <%= image_tag 'legolis.jpg'%>
-    </div>
-    <h2 class="profile-username">Legolis</h2>
-    <small class="profile-user-handle">700 hrs</small>
-    <div class="profile-actions">
-      <button class="profile-button profile-button--primary">Reserve</button>
-      <button class="profile-button profile-button--secondary">
-        $150
-      </button>
-    </div>
-    <div class="profile-actions">
-      <a href="#" class="profile-button profile-button--icon">
-        <%= image_tag 'warhammer.png'%>
-      </a>
-      <a href="#" class="profile-button profile-button--icon">
-        <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp'%>
-      </a>
-      <a href="#" class="profile-button profile-button--icon">
-        <%= image_tag 'pathfinder.png'%>
-      </a>
-    </div>
-  </article>
-
-
-  <article class="profile-card">
-    <div class="profile-image" style="width: 175px; height:175px;">
-       <%= image_tag 'legolis.jpg'%>
-    </div>
-    <h2 class="profile-username">Gandalf</h2>
-    <small class="profile-user-handle">15 hrs</small>
-    <div class="profile-actions">
-      <button class="profile-button profile-button--primary">Reserve</button>
-      <button class="profile-button profile-button--secondary">
-        $150
-      </button>
-    </div>
-    <div class="profile-actions">
-      <a href="#" class="profile-button profile-button--icon">
-        <%= image_tag 'Vampire_The_Masquerade.png'%>
-      </a>
-      <a href="#" class="profile-button profile-button--icon">
-        <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp'%>
-      </a>
-      <a href="#" class="profile-button profile-button--icon">
-        <%= image_tag 'pathfinder.png'%>
-      </a>
-    </div>
-  </article>
-
-  <article class="profile-card">
-    <div class="profile-image" style="width: 175px; height:175px;">
-       <%= image_tag 'legolis.jpg'%>
-    </div>
-    <h2 class="profile-username">Legolis</h2>
-    <small class="profile-user-handle">@elena_zoldado</small>
-    <div class="profile-actions">
-      <button class="profile-button profile-button--primary">Reserve</button>
-      <button class="profile-button profile-button--secondary">
-        $150
-      </button>
-    </div>
-    <div class="profile-actions">
-      <a href="#" class="profile-button profile-button--icon">
-        <%= image_tag 'Vampire_The_Masquerade.png'%>
-      </a>
-      <a href="#" class="profile-button profile-button--icon">
-        <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp'%>
-      </a>
-      <a href="#" class="profile-button profile-button--icon">
-        <%= image_tag 'pathfinder.png'%>
-      </a>
-    </div>
-  </article>
+    <article class="profile-card">
+      <div class="profile-image" style="width: 175px; height:175px;">
+        <%= image_tag 'legolis.jpg'%>
+      </div>
+      <h2 class="profile-username">Legolis</h2>
+      <small class="profile-user-handle">@elena_zoldado</small>
+      <div class="profile-actions">
+        <button class="profile-button profile-button--primary">Reserve</button>
+        <button class="profile-button profile-button--secondary">
+          $150
+        </button>
+      </div>
+      <div class="profile-actions">
+        <a href="#" class="profile-button profile-button--icon">
+          <%= image_tag 'Vampire_The_Masquerade.png'%>
+        </a>
+        <a href="#" class="profile-button profile-button--icon">
+          <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp'%>
+        </a>
+        <a href="#" class="profile-button profile-button--icon">
+          <%= image_tag 'pathfinder.png'%>
+        </a>
+      </div>
+    </article>
+    <article class="profile-card">
+      <div class="profile-image" style="width: 175px; height:175px;">
+        <%= image_tag 'legolis.jpg'%>
+      </div>
+      <h2 class="profile-username">Legolis</h2>
+      <small class="profile-user-handle">700 hrs</small>
+      <div class="profile-actions">
+        <button class="profile-button profile-button--primary">Reserve</button>
+        <button class="profile-button profile-button--secondary">
+          $150
+        </button>
+      </div>
+      <div class="profile-actions">
+        <a href="#" class="profile-button profile-button--icon">
+          <%= image_tag 'warhammer.png'%>
+        </a>
+        <a href="#" class="profile-button profile-button--icon">
+          <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp'%>
+        </a>
+        <a href="#" class="profile-button profile-button--icon">
+          <%= image_tag 'pathfinder.png'%>
+        </a>
+      </div>
+    </article>
+    <article class="profile-card">
+      <div class="profile-image" style="width: 175px; height:175px;">
+        <%= image_tag 'legolis.jpg'%>
+      </div>
+      <h2 class="profile-username">Gandalf</h2>
+      <small class="profile-user-handle">15 hrs</small>
+      <div class="profile-actions">
+        <button class="profile-button profile-button--primary">Reserve</button>
+        <button class="profile-button profile-button--secondary">
+          $150
+        </button>
+      </div>
+      <div class="profile-actions">
+        <a href="#" class="profile-button profile-button--icon">
+          <%= image_tag 'Vampire_The_Masquerade.png'%>
+        </a>
+        <a href="#" class="profile-button profile-button--icon">
+          <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp'%>
+        </a>
+        <a href="#" class="profile-button profile-button--icon">
+          <%= image_tag 'pathfinder.png'%>
+        </a>
+      </div>
+    </article>
+    <article class="profile-card">
+      <div class="profile-image" style="width: 175px; height:175px;">
+        <%= image_tag 'legolis.jpg'%>
+      </div>
+      <h2 class="profile-username">Legolis</h2>
+      <small class="profile-user-handle">@elena_zoldado</small>
+      <div class="profile-actions">
+        <button class="profile-button profile-button--primary">Reserve</button>
+        <button class="profile-button profile-button--secondary">
+          $150
+        </button>
+      </div>
+      <div class="profile-actions">
+        <a href="#" class="profile-button profile-button--icon">
+          <%= image_tag 'Vampire_The_Masquerade.png'%>
+        </a>
+        <a href="#" class="profile-button profile-button--icon">
+          <%= image_tag 'call-of-cthulhu-logo-1_1200x1200.webp'%>
+        </a>
+        <a href="#" class="profile-button profile-button--icon">
+          <%= image_tag 'pathfinder.png'%>
+        </a>
+      </div>
+    </article>
   </div>
 </div>

@@ -2,11 +2,12 @@
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
-  background: #9a540e;
+  background: #E9793A; /* Updated button color */
   transition: background 0.3s ease;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); /* Drop shadow */
 }
 
 .btn-flat:hover {
-  background: #c54800;
+  background: #BF5D18; /* Updated hover color */
   color: white;
 }
