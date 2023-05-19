@@ -7,6 +7,8 @@ class DmProfilesController < ApplicationController
 
   def show
     @dm_profile = DmProfile.find(params[:id])
+    @booking = Booking.new
+    authorize @booking
     authorize @dm_profile
   end
 

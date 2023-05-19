@@ -1,4 +1,4 @@
-,<div class="showpage-container">
+<div class="showpage-container">
     <div class="profile-name-img-container">
       <div><%= image_tag("ms-doubt-fire.jpg", alt: "profile picture") %>
       </div>
@@ -47,8 +47,26 @@
 
     <div class="flex-1 ">
       <p>200$hr</p><p>Available Mon - Fri <br>18:00 - 24:00</p>
-      <p><%= link_to 'Book Your Session', dm_profiles_path, class: 'btn btn-primary'  %></p>
+      <%# <p><%= link_to 'Book Your Session', new_dm_profile_booking_path(@dm_profile), class: 'btn btn-primary' </p>
+      <button href="make-new-booking" class="btn btn-primary">Book Your Session</button> %>
     </div>
 
   </div>
+
+  <div class="new-booking-page-container" id="make-new-booking">
+  <h1>Making New Booking</h1>
+    <%= simple_form_for [@dm_profile, @booking], html: { class: "cmint"} do |f| %>
+      <%= f.input :game_type, :collection => %i[Call\ Of\ Cthulu  Dungeons\ and\ Dragons Pathfinder Vampire\ The\ Masquerade Warhammer\ Fantasy\ Roleplay], input_html: {style: "opacity: 50%; color: black;"} %>
+      <%= f.input :date, input_html: {style: "opacity: 50%; color: black;"}, as: :date, html5: true %>
+      <%= f.input :session_hours, input_html: {style: "opacity: 50%; color: black;"}, :label => 'How long will you play? (hrs)', :collection => (1..10) %>
+      <%= f.input :player_number, input_html: {style: "opacity: 50%; color: black;"}, :label => 'How many players?', :collection => (1..10) %>
+      <%= f.input :details, input_html: {style: "opacity: 50%; color: black;"}, :label => 'Message for the DM' %>
+      <div style="display:flex; justify-content: space-evenly">
+        <input class="btn btn-success" type="reset" value="Reset form">
+        <%= f.button :submit, "Create Booking", class: "btn btn-primary"%>
+      </div>
+    <% end %>
+</div>
+
+
 </div>

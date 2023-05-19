@@ -15,7 +15,7 @@
   min-height: 100%;
 }
 
-.booking-card-container {
+.bookings-card-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
@@ -41,7 +41,7 @@
 
 .booking-infos-logo {
   height: 100px;
-  width: 100px;
+  width: 100%;
 }
 
 .booking-infos {

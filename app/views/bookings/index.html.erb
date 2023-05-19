@@ -1,6 +1,6 @@
 <div class="booking-container d-flex align-items-center justify-content-center flex-column">
   <h1 id ='bookings-title'><strong><%= @bookings.count %> BOOKING(S)</strong></h1>
-  <div class="booking-card-container"><% @bookings.each do |booking| %>
+  <div class="bookings-card-container"><% @bookings.each do |booking| %>
       <div class="card m-3 p-3">
         <h5>Booking with <strong> <%= booking.dm_profile.user.user_name.upcase %></strong></h5>
         <div class="booking-infos">
@@ -10,7 +10,7 @@
             <li>Session length: <%= booking.session_hours %> hours</li>
             <li>Players: <%= booking.player_number %></li>
           </ul>
-          <% case booking.game_type %>
+        <% case booking.game_type %>
           <% when 'Dungeons and Dragons' %>
           <% gamelogo = 'dnd2.png' %>
           <% when 'Vampire The Masquerade' %>
@@ -22,8 +22,8 @@
           <% when 'Warhammer Fantasy Roleplay' %>
           <% gamelogo = 'WFRP-Core-logo.png' %>
         <% end %>
-        <%= image_tag gamelogo, alt: "Logo of the game that will be played", class: 'booking-infos-logo' %>
-      </div>
+          <%= image_tag gamelogo, alt: "Logo of the game that will be played", class: 'booking-infos-logo' %>
+        </div>
       <%= link_to "View details", booking_path(booking), class: "btn btn-flat align-self-start" %>
     </div>
   <% end %></div>

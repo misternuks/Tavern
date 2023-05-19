@@ -1,4 +1,9 @@
 .cmint {
   padding: 16px;
-  background-color: white
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  max-width: 75%;
+  align-self: center;
 }
