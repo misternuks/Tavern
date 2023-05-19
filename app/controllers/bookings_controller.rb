@@ -4,7 +4,8 @@ class BookingsController < ApplicationController
   def index
     @bookings = policy_scope(Booking)
     @user_bookings = current_user.bookings
-    @dm_bookings = current_user.dm_profile.present? ? @bookings.select{|booking| booking.dm_profile_id == current_user.dm_profile.id} : []
+    @dm_bookings = current_user.dm_profile.present? ? @bookings.select{ |booking| booking.dm_profile_id == current_user.dm_profile.id } : []
+    @combined_bookings = @user_bookings + @dm_bookings
   end
 
   def show
