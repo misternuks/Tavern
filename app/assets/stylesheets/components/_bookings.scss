@@ -48,3 +48,14 @@
   display: flex;
   justify-content:space-between
 }
+
+.booking-card {
+  background-color: white;
+}
+
+
+.booking-buttons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}

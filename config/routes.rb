@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'users/:id', to: 'users#show', as: :user
   resources :dm_profiles, only: %i[index show new create] do
-    resources :bookings, only: %i[new create]
+    resources :bookings, only: %i[new create edit update]
   end
   resources :bookings, only: %i[index show destroy]
 end
