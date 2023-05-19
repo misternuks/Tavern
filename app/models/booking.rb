@@ -1,4 +1,6 @@
 class Booking < ApplicationRecord
+  enum :status, { pending: 0, accepted: 1, declined: 2 }
+
   belongs_to :dm_profile
   belongs_to :user
 

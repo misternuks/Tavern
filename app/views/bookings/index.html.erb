@@ -30,10 +30,29 @@
       <div class="booking-buttons">
         <%= link_to "View details", booking_path(booking), class: "btn btn-flat p-3" %>
         <% if current_user.dm_profile.present? && current_user.id == booking.dm_profile.user_id %>
-          <%= link_to "Accept", booking_path(booking), class: "btn btn-flat p-3" %>
-          <%= link_to "Reject", booking_path(booking), class: "btn btn-flat p-3", data: { turbo_method: :delete,
-    turbo_confirm: "Do you want to reject this booking?" } %>
-        <% end %></div>
+          <% if booking.pending? %>
+            <%= simple_form_for booking do |f| %>
+              <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
+              <%= f.submit 'Accept', class: 'btn btn-info' %>
+            <% end %>
+
+            <%= simple_form_for booking do |f| %>
+              <%= f.input :status, as: :hidden, input_html: { value: 'declined'} %>
+              <%= f.submit 'Decline', class: 'btn btn-light' %>
+            <% end %>
+          <% else %>
+            <p class='booking-tag'><%= booking.status %></p>
+          <% end %>
+
+          <%#= link_to "Accept", booking_path(booking), class: "btn btn-flat p-3" %>
+          <%#= link_to "Reject",
+          booking_path(booking),
+          class: "btn btn-flat p-3",
+          data: { turbo_method: :delete,
+          turbo_confirm: "Do you want to reject this booking?" }
+          %>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>
