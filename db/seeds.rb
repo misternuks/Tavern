@@ -19,7 +19,7 @@ count = 0
     password: "123456",
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    user_name: Faker::Internet.username
+    user_name: Faker::Fantasy::Tolkien.character
   )
   DmProfile.create!(
     price: rand(1..10),

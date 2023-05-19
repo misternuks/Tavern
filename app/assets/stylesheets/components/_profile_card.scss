@@ -31,44 +31,48 @@
 }
 
 .profile-card {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	padding: 3rem;
-	// width: 90%;
-	background-color: #1b2028;
-	border-radius: 16px;
-	position: relative;
-	border: 3px solid transparent;
-	background-clip: padding-box;
-	text-align: center;
-	color: #f1f3f3;
-	background-image: linear-gradient(
-		135deg,
-		rgba(#752e7c, 0.35),
-		rgba(#734a58, 0.1) 15%,
-		#1b2028 20%,
-		#1b2028 100%
-	);
-	&:after {
-		content: "";
-		display: block;
-		top: -3px;
-		left: -3px;
-		bottom: -3px;
-		right: -3px;
-		z-index: -1;
-		position: absolute;
-		border-radius: 16px;
-		background-image: linear-gradient(
-			135deg,
-			#752e7c,
-			#734a58 20%,
-			#1b2028 30%,
-			#2c333e 100%
-		);
-	}
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
+  /* width: 90%; */
+  background-color: #181c24;
+  border-radius: 16px;
+  position: relative;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+  text-align: center;
+  color: #f1f3f3;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Drop shadow for the border */
+
+  background-image: linear-gradient(
+    135deg,
+    rgba(237, 119, 29, 0.35),
+    rgba(230, 226, 227, 0.1) 15%,
+    #1b2028 20%,
+    #1b2028 100%
+  );
+
+  &:after {
+    content: "";
+    display: block;
+    top: -3px;
+    left: -3px;
+    bottom: -3px;
+    right: -3px;
+    z-index: -1;
+    position: absolute;
+    border-radius: 16px;
+    background-image: linear-gradient(
+      135deg,
+      #ED771D,
+      #e6e2e3 20%,
+      #1b2028 30%,
+      #2c333e 100%
+    );
+  }
 }
+
 
 .profile-image {
 	border-radius: 50%;
@@ -117,8 +121,8 @@
 
 	&--primary {
 		border-radius: 99em;
-		background-color: #3772ff;
-		background-image: linear-gradient(135deg, #5587ff, #3772ff);
+		background-color: #ED771D;
+		background-image: linear-gradient(135deg, #e38c49, #ED771D);
 		color: #fff;
 		padding: 0 1.375em;
 		&:hover,
@@ -131,7 +135,7 @@
 		padding: 0 1.375em;
 		border-radius: 99em;
 		border: 3px solid #343945;
-		color: #7d8396;
+		color: white;
 		i {
 			font-size: 1.25em;
 		}

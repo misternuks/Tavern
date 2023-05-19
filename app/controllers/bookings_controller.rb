@@ -40,24 +40,24 @@ class BookingsController < ApplicationController
     redirect_to bookings_path
   end
 
-  def edit
-    @booking = Booking.find(params[:id])
-    authorize @booking
-  end
+  # def edit
+  #   @booking = Booking.find(params[:id])
+  #   authorize @booking
+  # end
 
   def update
     @booking = Booking.find(params[:id])
+    authorize @booking
     if @booking.update(booking_params)
-      redirect_to booking_path(@booking)
+      redirect_to bookings_path
     else
-      render :edit, status: :unprocessable_entity
+      render :index, status: :unprocessable_entity
     end
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:game_type, :date, :session_hours, :player_number, :details)
+    params.require(:booking).permit(:game_type, :date, :session_hours, :player_number, :details, :status)
   end
-
 end
