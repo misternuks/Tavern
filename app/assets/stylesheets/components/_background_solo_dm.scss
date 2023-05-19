@@ -16,18 +16,22 @@
 
 .showpage-container::before {
   content: "";
-  background: url('dm-solo-page'), rgba(0, 0, 0, 0.7);
+  background: url('dm-solo-page.jpg'), rgba(0, 0, 0, 0.7);
   background-blend-mode: multiply;
   position: absolute;
   top: 0;
   left: 0;
-  right: 0; /* Set the right edge to 0 to cover the whole view */
-  bottom: 0; /* Set the bottom edge to 0 to cover the whole view */
+  right: 0;
+  bottom: 0;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   z-index: -1;
+
+  /* Add blur effect to the bottom border */
+  filter: blur(20px);
 }
+
 
 .profile-flex {
   display: flex;
@@ -74,6 +78,7 @@
   padding: 16px;
   border-radius: 16px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out;
 }
 
@@ -87,14 +92,18 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .btn.btn-primary {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px; /* Replace 10px with your desired border radius value */
+  color: white;
 }
 
 .profile-name-img-container {
+  margin-top: 120px;
+  margin-bottom: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
